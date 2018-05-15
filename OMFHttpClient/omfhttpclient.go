@@ -7,22 +7,22 @@ import (
 	"net/http"
 )
 
-func CreateOMFType( jsonTypeString string ){
+func CreateOMFType(jsonTypeString string) {
 	// STEP 1 - Create a Type
-	fmt.Println("Sending type creation request");
-	makeWebRequest(jsonTypeString, "type", "create");
+	fmt.Println("Sending type creation request")
+	makeWebRequest(jsonTypeString, "type", "create")
 }
 
-func CreateOMFStream( jsonStreamString string ){
+func CreateOMFStream(jsonStreamString string) {
 	// STEP 2 - Create a Stream/Container
-	fmt.Println("Sending stream creation request");
-	makeWebRequest(jsonStreamString, "container", "create");
+	fmt.Println("Sending stream creation request")
+	makeWebRequest(jsonStreamString, "container", "create")
 }
 
-func SendOMFData(jsonDataString string){
+func SendOMFData(jsonDataString string) {
 	// STEP 3 - Send data associated with a stream
-	fmt.Println("Sending data values");
-	makeWebRequest(jsonDataString, "data", "create");
+	fmt.Println("Sending data values")
+	makeWebRequest(jsonDataString, "data", "create")
 }
 
 // from an example at https://stackoverflow.com/questions/24455147/how-do-i-send-a-json-string-in-a-post-request-in-go
@@ -57,5 +57,3 @@ func makeWebRequest(jsonToSend, omfMessageType, omfAction string) {
 	body, _ := ioutil.ReadAll(resp.Body)
 	fmt.Println("response Body:", string(body))
 }
-
-

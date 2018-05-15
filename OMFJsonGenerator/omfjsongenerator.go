@@ -35,12 +35,12 @@ func GenerateStream(streamId, typeId string) string {
 	return json
 }
 
-func GenerateValues( containerId, propertyName, timestamp string, value int) string {
-            var json = " [ { " +
-                                  " \"containerid\": \"" + containerId + "\", " +
-                                  " \"values\": [ { " +
-                                            " \"" + propertyName + "\":" + strconv.Itoa(value) + ", " +
-                                            " \"TimeId\": \"" + timestamp + "\" } ] " +
-                                  " } ] ";
-            return json;
+func GenerateValues(containerId, propertyName, timestamp string, value int) string {
+	var json = " [ { " +
+		" \"containerid\": \"" + containerId + "\", " +
+		" \"values\": [ { " +
+		" \"" + propertyName + "\":" + strconv.Itoa(value) + ", " +
+		" \"TimeId\": \"" + timestamp + "\" } ] " +
+		" } ] "
+	return json
 }

@@ -15,7 +15,7 @@ func main() {
 	typeJson := omfjsongenerator.GenerateType(typeId, propertyName)
 	omfhttpclient.CreateOMFType(typeJson)
 
-	streamId := "N123GG" 
+	streamId := "N123GG"
 	streamJson := omfjsongenerator.GenerateStream(streamId, typeId)
 	omfhttpclient.CreateOMFStream(streamJson)
 
